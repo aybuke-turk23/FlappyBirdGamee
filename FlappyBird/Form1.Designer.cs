@@ -1,4 +1,5 @@
-﻿namespace FlappyBird
+﻿
+namespace FlappyBird
 {
     partial class Form1
     {
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             altengel = new PictureBox();
             zemin = new PictureBox();
             ustengel = new PictureBox();
@@ -35,6 +37,9 @@
             bulut2 = new PictureBox();
             bulut3 = new PictureBox();
             bulut1 = new PictureBox();
+            gameTimer = new System.Windows.Forms.Timer(components);
+            gameTimer.Tick += gametimerEvent;
+            scoreText = new Label();
             ((System.ComponentModel.ISupportInitialize)altengel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)zemin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ustengel).BeginInit();
@@ -47,13 +52,12 @@
             // altengel
             // 
             altengel.Image = Properties.Resources.pipe;
-            altengel.Location = new Point(454, 245);
+            altengel.Location = new Point(359, 245);
             altengel.Name = "altengel";
             altengel.Size = new Size(70, 153);
             altengel.SizeMode = PictureBoxSizeMode.StretchImage;
             altengel.TabIndex = 0;
             altengel.TabStop = false;
-            altengel.Click += pictureBox1_Click;
             // 
             // zemin
             // 
@@ -64,12 +68,11 @@
             zemin.SizeMode = PictureBoxSizeMode.StretchImage;
             zemin.TabIndex = 1;
             zemin.TabStop = false;
-            zemin.Click += pictureBox2_Click;
             // 
             // ustengel
             // 
             ustengel.Image = Properties.Resources.pipedown;
-            ustengel.Location = new Point(454, 0);
+            ustengel.Location = new Point(617, -12);
             ustengel.Name = "ustengel";
             ustengel.Size = new Size(66, 183);
             ustengel.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -79,9 +82,9 @@
             // flappybird
             // 
             flappybird.Image = Properties.Resources.bird;
-            flappybird.Location = new Point(31, 158);
+            flappybird.Location = new Point(12, 109);
             flappybird.Name = "flappybird";
-            flappybird.Size = new Size(87, 62);
+            flappybird.Size = new Size(70, 51);
             flappybird.SizeMode = PictureBoxSizeMode.StretchImage;
             flappybird.TabIndex = 3;
             flappybird.TabStop = false;
@@ -95,12 +98,11 @@
             bulut2.SizeMode = PictureBoxSizeMode.StretchImage;
             bulut2.TabIndex = 4;
             bulut2.TabStop = false;
-            bulut2.Click += pictureBox1_Click_1;
             // 
             // bulut3
             // 
             bulut3.Image = Properties.Resources.pngwing_com;
-            bulut3.Location = new Point(608, 42);
+            bulut3.Location = new Point(486, 40);
             bulut3.Name = "bulut3";
             bulut3.Size = new Size(125, 62);
             bulut3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -117,12 +119,28 @@
             bulut1.TabIndex = 6;
             bulut1.TabStop = false;
             // 
+            // gameTimer
+            // 
+            gameTimer.Enabled = true;
+            gameTimer.Interval = 20;
+            // 
+            // scoreText
+            // 
+            scoreText.AutoSize = true;
+            scoreText.BackColor = Color.AntiqueWhite;
+            scoreText.Location = new Point(12, 421);
+            scoreText.Name = "scoreText";
+            scoreText.Size = new Size(43, 20);
+            scoreText.TabIndex = 7;
+            scoreText.Text = "skor: ";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SkyBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(scoreText);
             Controls.Add(flappybird);
             Controls.Add(ustengel);
             Controls.Add(zemin);
@@ -130,8 +148,11 @@
             Controls.Add(bulut1);
             Controls.Add(bulut3);
             Controls.Add(altengel);
+            KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
+            KeyDown += keyisdown;
+            KeyUp += keyisup;
             ((System.ComponentModel.ISupportInitialize)altengel).EndInit();
             ((System.ComponentModel.ISupportInitialize)zemin).EndInit();
             ((System.ComponentModel.ISupportInitialize)ustengel).EndInit();
@@ -140,7 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)bulut3).EndInit();
             ((System.ComponentModel.ISupportInitialize)bulut1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
+
 
         #endregion
 
@@ -151,5 +174,7 @@
         private PictureBox bulut2;
         private PictureBox bulut3;
         private PictureBox bulut1;
+        private System.Windows.Forms.Timer gameTimer;
+        private Label scoreText;
     }
 }
