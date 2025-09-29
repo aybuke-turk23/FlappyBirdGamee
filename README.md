@@ -50,6 +50,6 @@ Eğer kod üzerinde değişiklik yapmak veya incelemek istiyorsanız:
 
 ## 🧑‍💻 Geliştirici
 
-**[Adınız Soyadınız]**
-* **GitHub:** [@KULLANICI_ADINIZ](https://github.com/KULLANICI_ADINIZ)
+**Aybüke TÜRK**
+* **GitHub:** (https://github.com/aybuke-turk23)
 * **Proje Tarihi:** Eylül 2025
