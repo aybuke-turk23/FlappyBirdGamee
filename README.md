@@ -34,7 +34,7 @@ Eğer sadece oyunu test etmek istiyorsanız:
 
 Eğer kod üzerinde değişiklik yapmak veya incelemek istiyorsanız:
 
-1.  Depoyu bilgisayarınıza klonlayın (`git clone [repo_adresiniz]`).
+1.  Depoyu bilgisayarınıza klonlayın (git clone https://github.com/aybuke-turk23/FlappyBirdGamee.git).
 2.  Visual Studio'da `FlappyBirdProject.sln` dosyasını açın.
 3.  Projeyi derleyin ve `F5` tuşuna basarak çalıştırın.
 
