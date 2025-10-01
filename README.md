@@ -2,7 +2,7 @@
 Flappy bird game  
 # 🐦 Flappy Bird Projesi
 
-Bu proje, C# programlama dili ve **Windows Forms (.NET Framework)** kullanılarak geliştirilmiş popüler Flappy Bird oyununun bir replikasıdır. Proje, temel oyun mantığı ve dinamik zorluk artışı gibi özellikleri içerir.
+Bu proje, C# programlama dili ve **Windows Forms (.NET )** kullanılarak geliştirilmiş popüler Flappy Bird oyununun bir replikasıdır. Proje, temel oyun mantığı ve dinamik zorluk artışı gibi özellikleri içerir.
 
 ---
 
@@ -22,7 +22,7 @@ Oyun, aşağıdaki temel mekaniklere sahiptir:
 
 Projeyi çalıştırmanın iki yolu vardır:
 
-### 1. Çalıştırılabilir Sürümü İndirme (Tavsiye Edilen)
+### 1. Çalıştırılabilir Sürümü İndirme
 
 Eğer sadece oyunu test etmek istiyorsanız:
 
